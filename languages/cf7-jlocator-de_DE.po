@@ -1,0 +1,44 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ContactForm7jLocator\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2017-10-03 07:49+0000\n"
+"PO-Revision-Date: 2017-10-03 07:50+0000\n"
+"Last-Translator: dschmitzer <daschmi@daschmi.de>\n"
+"Language-Team: German\n"
+"Language: de-DE\n"
+"Plural-Forms: nplurals=2; plural=n != 1\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Loco - https://localise.biz/"
+
+#: classes/Action.class.php:49 classes/Action.class.php:49
+msgid "jLocator"
+msgstr "jLocator"
+
+#. Name of the plugin
+msgid "ContactForm7jLocator"
+msgstr "ContactForm7jLocator"
+
+#. Description of the plugin
+msgid "This plugin integrates the jLocator script into a ContactForm7 form."
+msgstr ""
+"Dieses Plugin integriert die jLocator Bibliothek in ein ContactForm7 "
+"Formular."
+
+#. URI of the plugin
+msgid ""
+"https://daschmi.de/jlocator-positions-und-adressbestimmung-mittels-gps-"
+"google-maps-und-jquery/"
+msgstr ""
+"https://daschmi.de/jlocator-positions-und-adressbestimmung-mittels-gps-"
+"google-maps-und-jquery/"
+
+#. Author of the plugin
+msgid "Daniel Schmitzer"
+msgstr "Daniel Schmitzer"
+
+#. Author URI of the plugin
+msgid "https://daschmi.de/"
+msgstr "https://daschmi.de/"

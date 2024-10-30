@@ -1,0 +1,86 @@
+<?php
+
+    /**
+     * User: Daschmi (daschmi@daschmi.de)
+     * Date: 17.09.17
+     * Time: 20:30
+     */
+
+    namespace cfjl;
+
+?>
+
+<div class="wrap">
+
+    <h1><?php echo __('Settings › Contact Form 7 jLocator', 'cf7-jlocator'); ?></h1>
+
+    <?php if (isset($_REQUEST['cfjl_confirm'])) { ?>
+    <div id="setting-error-settings_updated" class="updated settings-error notice is-dismissible">
+        <p><strong><?php echo __('Settings saved.', 'cf7-jlocator'); ?></strong></p>
+    </div>
+    <?php } ?>
+
+    <form method="post" action="options-general.php?page=cfjl&noheader=1" enctype="multipart/form-data">
+
+        <table class="form-table">
+            <tbody>
+                <tr>
+                    <th scope="row"><label for="default_role"><?php echo __('include Google Maps', 'cf7-jlocator'); ?></label></th>
+                    <td>
+                        <select name="cfjl_include_googlemaps" id="include_googlemaps">
+                            <option value="1" <?php echo ((get_option('cfjl_include_googlemaps') === '1')?'selected="selected"':''); ?>><?php echo __('Yes', 'cf7-jlocator'); ?></option>
+                            <option value="0" <?php echo ((get_option('cfjl_include_googlemaps') === '0')?'selected="selected"':''); ?>><?php echo __('No', 'cf7-jlocator'); ?></option>
+                        </select>
+                    </td>
+                </tr>
+                <tr id="row_cfjl_googlemaps_apikey">
+                    <th scope="row"><label for="cfjl_googlemaps_apikey"><?php echo __('Google Maps API Key', 'cf7-jlocator'); ?></label></th>
+                    <td>
+                        <input name="cfjl_googlemaps_apikey" type="text" id="cfjl_googlemaps_apikey" value="<?php echo get_option('cfjl_googlemaps_apikey'); ?>" class="regular-text code" />
+                    </td>
+                </tr>
+                <tr id="row_cfjl_path">
+                    <th scope="row"><label for="cfjl_file">
+                            <?php echo __('Upload jLocator Script', 'cf7-jlocator'); ?><br />
+                            <p class="description">(jLocator.js)</p>
+                        </label>
+                    </th>
+                    <td>
+
+                        <?php if (file_exists($this->view['path'])) { ?>
+                        <p style="color:green;"><?php echo __('File exists.', 'cf7-jlocator'); ?></p>
+                        <?php } ?>
+                        
+                        <input name="cfjl_file" type="file" id="row_cfjl_file" class="regular-text code" />
+                        <p class="description"><?php echo __('You can get your Licence for jLocatore <a href="#">here</a>.', 'cf7-jlocator'); ?></p>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <script>
+
+            jQuery('#include_googlemaps').on('change', function() {
+
+                if (jQuery(this).val() === '1')
+                {
+
+                    jQuery('#row_cfjl_googlemaps_apikey').show();
+
+                }
+                else
+                {
+
+                    jQuery('#row_cfjl_googlemaps_apikey').hide();
+
+                }
+
+            } ).change();;
+
+        </script>
+
+        <p class="submit"><input type="submit" name="submit" id="submit" class="button button-primary" value="Änderungen übernehmen"></p>
+
+    </form>
+
+</div>
